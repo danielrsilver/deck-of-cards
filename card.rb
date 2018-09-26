@@ -7,17 +7,11 @@ class Card
   end
 
   def face
-    if (2..10).include?value
-    value
-    elsif value == 1
-    'Ace'
-    elsif value == 11
-    'Jack'
-    elsif value == 12
-    'Queen'
-    elsif value == 13
-    'King'
-    else 'try again'
+    if (2..10) === @value
+      @value
+    else
+      face_cards = { 1 => 'Ace', 11 => 'Jack', 12 => 'Queen', 13 => 'King' }
+        face_cards[@value]
     end
   end
 
@@ -27,4 +21,3 @@ class Card
 end
 
 card = Card.new(13, 'hearts')
-puts card
