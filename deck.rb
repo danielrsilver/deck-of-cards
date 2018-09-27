@@ -15,12 +15,11 @@ class Deck
       end
     end
     @cards.shuffle!
-    end
+  end
 
 
   def draw
-    @drawn_cards = []
-    @drawn_cards << @cards.pop
+    puts @cards.pop
   end
 
   def deal (number)
