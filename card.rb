@@ -19,5 +19,3 @@ class Card
     "#{face} of #{suit.capitalize}"
   end
 end
-
-card = Card.new(13, 'hearts')
